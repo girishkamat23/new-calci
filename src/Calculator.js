@@ -8,13 +8,11 @@ const Calculator = () => {
     
 
     const onChangeListener = (e) => {
-        e.preventDefault();
         let val = e.target.value;
         setInput(input + val);                
     }
 
     const onClickListener = (e) => {
-
         let id = e.target.id;
         let val = input;
 
@@ -33,12 +31,7 @@ const Calculator = () => {
                 val = eval(val.replace(/%/g,"*1/100"));
                 break;
             }
-            case "calc" : {
-                val = val;
-                break;
-            }
-            
-            
+                        
             default : {
                 val += Constant[id];
                 break;
